@@ -1,0 +1,409 @@
+.bg-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* height: 50vh; */
+  /* height: inherit; */
+  position: fixed;
+  background: url("../../../assets/budChi/bg.jpg");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: right bottom, left top;
+  background-size: cover;
+  /* background: red; */
+}
+
+.inner-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form {
+  text-align: center;
+  box-shadow: 2px 2px 10px gray;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(4px);
+  font-family: cursive;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.form a {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.tagline {
+  color: yellow;
+  font-size: 0.8rem;
+}
+
+.form input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background: none;
+  backdrop-filter: blur(2px);
+  outline: none;
+  border: 0.1px solid rgb(131, 131, 255);
+  font-family: cursive;
+}
+
+.forget-statement {
+  text-align: right;
+}
+
+.auth-button {
+  background: rgb(131, 131, 255);
+  color: rgb(0, 0, 95);
+  font-weight: 700;
+  /* backdrop-filter: brightness(60%); */
+}
+
+.home {
+  margin: 0;
+  padding: 1rem 2.5rem;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: cursive;
+}
+
+.top {
+  margin-top: 2rem;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* backdrop-filter: blur(5px); */
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.account-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.account-status div {
+  backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0;
+  padding: 0.5rem;
+  width: 10rem;
+  box-shadow: 1px 1px 5px white;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.account-status div:hover {
+  transform: scale(1.03);
+}
+
+.account-status div span {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: yellow;
+}
+.account-status div p {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 0;
+}
+
+.welcome {
+  /* color: yellow; */
+  width: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  /* backdrop-filter: blur(3px); */
+  border-radius: 0.5rem;
+  /* padding: 1rem; */
+  width: 45%;
+}
+
+.left-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
+.left-list div {
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 5px white;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  color: yellow;
+}
+
+.left-list div:hover {
+  box-shadow: none;
+}
+
+.mid2 {
+  width: 50%;
+  display: flex;
+}
+
+.quoteForm {
+  font-size: 1.5rem;
+  background: url("../../../assets//budChi/quoteBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.quoteForm span:nth-child(1) {
+  color: white;
+}
+.quoteForm span:nth-child(3) {
+  color: yellow;
+}
+
+.displayNone {
+  display: none;
+}
+.account-input {
+  margin-top: 2rem;
+  width: 70%;
+}
+.account-input .form {
+  width: 100%;
+  position: relative;
+}
+
+.account-input .form > p {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  color: yellow;
+  cursor: pointer;
+}
+
+.account-input .form input {
+  margin-top: 1rem;
+}
+
+.account-input .form div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1.5rem;
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  width: 30%;
+  box-shadow: 1px 1px 5px white;
+
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.right > p {
+  position: absolute;
+  font-weight: bold;
+  color: yellow;
+  cursor: pointer;
+  right: 16px;
+  top: 0;
+}
+.sub-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.data-boxes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  flex-direction: column;
+  height: max-content;
+  margin-top: 0.5rem;
+  max-height: 40vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  /* scroll-snap-type: mandatory; */
+
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+
+  /* color: white; */
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(58, 58, 255);
+
+  /* background: black; */
+}
+::-webkit-scrollbar-thumb:hover {
+  /* background: #555; */
+  background: blue;
+}
+
+.data-box {
+  backdrop-filter: blur(10px);
+  box-shadow: 1px 1px 5px white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  width: 80%;
+  font-size: 1rem;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.data-box div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 0;
+}
+.data-box div:nth-child(2) {
+  font-size: 0.7rem;
+}
+
+.bottom {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 80%;
+  }
+
+  .mid,
+  .mid2 {
+    flex-direction: column;
+  }
+  .inner-container {
+    /* overflow: scroll; */
+  }
+  .home {
+    padding: 0.5rem;
+    /* height: fit-content; */
+    overflow-y: scroll;
+  }
+
+  .mid,
+  .bottom {
+    flex-direction: column;
+  }
+  .top,
+  .bottom {
+    margin-top: 1rem;
+    height: 10vh;
+    /* line-height: 0; */
+  }
+  .account-status {
+    /* flex-direction: column;s */
+    display: none;
+  }
+
+  .account-status div {
+    width: 5rem;
+  }
+
+  .account-status div span {
+    font-size: 1rem;
+  }
+
+  .left,
+  .right {
+    width: 90%;
+  }
+
+  .account-input {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .mid2 {
+    width: 90%;
+  }
+
+  .qouteContainer {
+    height: 100%;
+    width: 100%;
+  }
+
+  .quoteInner {
+    background: url("../../../assets/budChi/quoteBg.jpg");
+  }
+
+  .form {
+    backdrop-filter: none;
+    /* backdrop-filter: brightness(0.5); */
+  }
+
+  .form input {
+    backdrop-filter: none;
+    /* backdrop-filter: brightness(0.5); */
+  }
+
+  .right {
+    backdrop-filter: brightness(0.5);
+  }
+
+  /* .inner-container {
+    height: inherit !important;
+  } */
+}

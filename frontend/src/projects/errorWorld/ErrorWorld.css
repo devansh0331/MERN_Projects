@@ -1,0 +1,23 @@
+.bg-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* height: 50vh; */
+  /* height: inherit; */
+  position: fixed;
+  background: url("../../assets/errorWorld/bg2.jpg");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: right bottom, left top;
+  background-size: cover;
+  /* background: red; */
+}
+
+.inner-container {
+  width: 100%;
+  /* height: 100vh;s */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+}
