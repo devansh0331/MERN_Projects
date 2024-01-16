@@ -4,6 +4,7 @@ const secret = "hkdjhajklnajksdnanasmdasd";
 
 const profile = (req, res) => {
   const { token } = req.cookies;
+
   try {
     jwt.verify(token, secret, {}, (err, info) => {
       if (err) throw err;

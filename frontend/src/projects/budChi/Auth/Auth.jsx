@@ -39,13 +39,15 @@ function Auth() {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    fetch(`http://localhost:5000/expenses/${userInfo.username}`).then((res) => {
+    fetch(
+      `https://mern-projects.onrender.com/expenses/${userInfo.username}`
+    ).then((res) => {
       res.json().then((res) => setExpenses(res));
     });
   }, [toggleExpense]);
   useEffect(() => {
     try {
-      fetch("http://localhost:5000/profile", {
+      fetch("https://mern-projects.onrender.com/profile", {
         credentials: "include",
       }).then((response) =>
         response.json().then((userInfo) => {
@@ -69,14 +71,17 @@ function Auth() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const checkUser = await fetch("http://localhost:5000/login", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-        credentials: "include",
-      });
+      const checkUser = await fetch(
+        "https://mern-projects.onrender.com/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+          credentials: "include",
+        }
+      );
 
       const parsedUserMessage = await checkUser.json();
       // const parsedUserStatus = await checkUser.status();
@@ -105,14 +110,17 @@ function Auth() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const createUser = await fetch("http://localhost:5000/signup", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({ name, username, email, password }),
-      });
+      const createUser = await fetch(
+        "https://mern-projects.onrender.com/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify({ name, username, email, password }),
+        }
+      );
 
       const parsedCreateUser = await createUser.json();
       console.log(parsedCreateUser);
@@ -154,7 +162,7 @@ function Auth() {
       const holder = userInfo.username;
       console.log("withdraw" + isWithdraw + "  deposit" + isDeposit);
       const updateBalance = await fetch(
-        "http://localhost:5000/update-balance",
+        "https://mern-projects.onrender.com/update-balance",
         {
           method: "POST",
           headers: {
@@ -172,19 +180,22 @@ function Auth() {
       console.log(updateBalance);
 
       if (updateBalance.status == 200) {
-        const data = await fetch("http://localhost:5000/post-expense", {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({
-            amount,
-            description: amountDesc,
-            deposit: true,
-            withdraw: false,
-            holder,
-          }),
-        });
+        const data = await fetch(
+          "https://mern-projects.onrender.com/post-expense",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+              amount,
+              description: amountDesc,
+              deposit: true,
+              withdraw: false,
+              holder,
+            }),
+          }
+        );
 
         if (data.status == 200) {
           // toast.success(updateBalance.json());
@@ -213,7 +224,7 @@ function Auth() {
       const holder = userInfo.username;
       console.log("withdraw" + isWithdraw + "  deposit" + isDeposit);
       const updateBalance = await fetch(
-        "http://localhost:5000/update-balance",
+        "https://mern-projects.onrender.com/update-balance",
         {
           method: "POST",
           headers: {
@@ -231,19 +242,22 @@ function Auth() {
       console.log(updateBalance);
 
       if (updateBalance.status == 200) {
-        const data = await fetch("http://localhost:5000/post-expense", {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({
-            amount,
-            description: amountDesc,
-            deposit: false,
-            withdraw: true,
-            holder,
-          }),
-        });
+        const data = await fetch(
+          "https://mern-projects.onrender.com/post-expense",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+              amount,
+              description: amountDesc,
+              deposit: false,
+              withdraw: true,
+              holder,
+            }),
+          }
+        );
 
         if (data.status == 200) {
           // toast.success(updateBalance.json());
@@ -317,7 +331,7 @@ function Auth() {
                   }}
                   onClick={(e) => {
                     e.preventDefault();
-                    fetch("http://localhost:5000/logout", {
+                    fetch("https://mern-projects.onrender.com/logout", {
                       method: "POST",
                       credentials: "include",
                     });
