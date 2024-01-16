@@ -10,7 +10,7 @@ const profile = (req, res) => {
       if (err) throw err;
       res.status(200).json(info);
     });
-    res.json(req.cookies);
+    // res.json(req.cookies);
   } catch (error) {
     res.status(500).json("Cannot load profile");
   }
