@@ -309,8 +309,8 @@ function Auth() {
                   }}
                 >
                   <span>Current Balance</span>
-
-                  <p>{userInfo.currentbalance}</p>
+                  <p>Click Here</p>
+                  {/* <p>{userInfo.currentbalance}</p> */}
                 </div>
               </div>
               <span className="welcome">
@@ -331,7 +331,7 @@ function Auth() {
                   }}
                   onClick={(e) => {
                     e.preventDefault();
-                    fetch("https://mern-projects.onrender.com/logout", {
+                    fetch("http://localhost:5000/logout", {
                       method: "POST",
                       credentials: "include",
                     });
@@ -464,10 +464,15 @@ function Auth() {
                     expenses == "" ? (
                       <div
                         className="data-box"
-                        style={{ color: "yellow", cursor: "pointer" }}
+                        style={{
+                          color: "yellow",
+                          cursor: "pointer",
+                          textAlign: "CENTER",
+                        }}
                         onClick={(e) => setToggleExpense(!toggleExpense)}
                       >
-                        Click here
+                        No Transactions available <br />
+                        (Click to refresh)
                       </div>
                     ) : (
                       expenses.map((item, key) => {

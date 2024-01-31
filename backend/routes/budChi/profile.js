@@ -6,6 +6,7 @@ const profile = (req, res) => {
   const { token } = req.cookies;
 
   try {
+    console.log("Token : " + token);
     jwt.verify(token, secret, {}, (err, info) => {
       if (err) throw err;
       res.status(200).json(info);
